@@ -1,23 +1,13 @@
-(function () {
-  function fnAddButtons() {
-    var btn = document.createElement("input");
-    btn.value = "Search Mathemafia";
-    btn.id = "search-mm-btn";
-    btn.type = "submit";
-    document.querySelector(".FPdoLc.tfB0Bf center").appendChild(btn);
-  }
-
-  function fnDefineEvents() {
-    document
-      .getElementById("search-mm-btn")
-      .addEventListener("click", function (event) {
-        fnSearch(event.target.value.split(" ")[1]);
-      });
-  }
-  function fnSearch(str) {
-    document.querySelector(".gLFyf.gsfi").value = str;
-  }
-
-  fnAddButtons();
-  fnDefineEvents();
-})();
+{
+    "name" : "CBW | Traderie Tools",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description" : "Created By: Reza Sumairu",
+    "content_scripts" : [
+        {
+            "js" : ["source.js"],
+            "css" : ["style.css"],
+            "matches" : ["*://traderie.com/*"]
+        }
+    ]
+}
